@@ -47,7 +47,7 @@ public class Main {
         short myShortValue = 20000;
         int myIntValue = 210000000;
 
-        long myTotalValue = 50000 +(10 *(myByteValue + myShortValue + myIntValue));
+        long myTotalValue = 50000L +(10 *(myByteValue + myShortValue + myIntValue));
         System.out.println("This is my total value " + myTotalValue);
     }
 }
