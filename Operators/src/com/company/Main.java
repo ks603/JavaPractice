@@ -76,5 +76,19 @@ public class Main {
             System.out.println("was car was true");
         }
         System.out.println(wasCar);
+
+//        Challenge
+        double variable2 = 20.00;
+        double variable3 = 80.00;
+        double variable4 = (variable2 + variable3) * 100.00;
+        System.out.println("the total here = " + variable4);
+        double theRemainder = variable4 % 40.00d;
+        System.out.println(theRemainder);
+        boolean isNoRemainder = (theRemainder == 0) ? true : false;
+        System.out.println("isnoRemainder = " + isNoRemainder);
+        if (!isNoRemainder) {
+            System.out.println("There is a remainder");
+        }
+
     }
 }
