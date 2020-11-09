@@ -22,10 +22,10 @@ public class Main {
         System.out.println(anotherVariable);
 
 
-        boolean gameOver = true;
-        int levelCompleted = 5;
-        int bonus = 100;
-        int score = 800;
+//        boolean gameOver = true;
+//        int levelCompleted = 5;
+//        int bonus = 100;
+//        int score = 800;
 
 //        if(score <5000 && score >1000) {
 //            System.out.println("Score was less than or equal to");
@@ -34,20 +34,20 @@ public class Main {
 //        } else {
 //            System.out.println("Got here");
 //        }
-       if( gameOver) {
-           int finalScore = score + (levelCompleted * bonus);
-           System.out.println(" Your final score was " + finalScore);
-       }
+       calculateScore(true, 800, 5, 100);
+       calculateScore(true, 10000, 8, 200);
 
-        boolean newGameOver = true;
-        int levelCompleted2 = 8;
-        int newBonus = 200;
-        int newScore = 10000;
-        if (newGameOver) {
-            int newFinalScore = newScore + (levelCompleted2 * newBonus);
-            System.out.println("Your new score was " + newFinalScore);
-
-        }
 
     }
+
+    public static void calculateScore(boolean gameOver,int score, int levelCompleted, int bonus) {
+
+
+        if( gameOver) {
+            int finalScore = score + (levelCompleted * bonus);
+            finalScore += 1000;
+            System.out.println(" Your final score was " + finalScore);
+        }
+    }
+
 }
