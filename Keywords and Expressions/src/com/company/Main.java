@@ -40,14 +40,16 @@ public class Main {
 
     }
 
-    public static void calculateScore(boolean gameOver,int score, int levelCompleted, int bonus) {
+    public static int calculateScore(boolean gameOver,int score, int levelCompleted, int bonus) {
 
 
         if( gameOver) {
             int finalScore = score + (levelCompleted * bonus);
             finalScore += 1000;
             System.out.println(" Your final score was " + finalScore);
+            return finalScore;
         }
+        return -1;
     }
 
 }
