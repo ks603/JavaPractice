@@ -8,6 +8,7 @@ public class Main {
         calculateScore(75);
         calculateScore();
         System.out.println(calcFeetAndInchesToCentimeters(4, 8));
+        calcFeetAndInchesToCentimeters(50);
     }
     public static int calculateScore(String playerName, int score) {
         System.out.println("PLayer " + playerName + " scored " + score + " points");
@@ -39,6 +40,21 @@ public class Main {
             centy = newVary * 2.54;
         }
         return centy;
+    }
+
+    public static double calcFeetAndInchesToCentimeters(double inches) {
+        double someVar = 0;
+        double someNewVar = 0;
+        if (inches <= 0) {
+            return -1;
+        } else {
+            someVar = inches % 12;
+            someNewVar = Math.floor(inches / 12);
+            System.out.println(someVar);
+            System.out.println(someNewVar);
+            System.out.println(calcFeetAndInchesToCentimeters(someNewVar, someVar));
+
+        } return someVar;
     }
 
 }
