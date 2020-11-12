@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        getDurationString(125, 34);
-        getDurationString(3661);
+        System.out.println(getDurationString(65, 45));
+        System.out.println(getDurationString(63145));
     }
 
     public static String getDurationString(int minutes, int seconds) {
@@ -13,11 +13,9 @@ public class Main {
             System.out.println("invalid Input");
             return "invalid Input";
         } else {
-            double hours = Math.floor(minutes / 60);
+            int hours = minutes / 60;
             minutes = minutes % 60;
-            String time = hours + "h" + minutes + "m" + seconds + "s";
-            System.out.println(hours + "h" + minutes + "m" + seconds + "s");
-            return time;
+            return hours + "h " + minutes + "m " + seconds + "s";
         }
     }
     public static String getDurationString(int seconds) {
@@ -25,9 +23,9 @@ public class Main {
             System.out.println("invalid Input");
             return "invalid Input";
         } else {
-            double minutes = Math.floor(seconds / 60);
+            int minutes = seconds / 60;
             seconds = seconds % 60;
-            return getDurationString((int) minutes, seconds);
+            return getDurationString( minutes, seconds);
         }
     }
 }
