@@ -7,8 +7,9 @@ public class Main {
         System.out.println(newScore);
         calculateScore(75);
         calculateScore();
-        System.out.println(calcFeetAndInchesToCentimeters(4, 8));
-        System.out.println(calcFeetAndInchesToCentimeters(50));
+        calcFeetAndInchesToCentimeters(10, 1);
+        calcFeetAndInchesToCentimeters(100);
+
     }
     public static int calculateScore(String playerName, int score) {
         System.out.println("PLayer " + playerName + " scored " + score + " points");
@@ -26,34 +27,29 @@ public class Main {
     }
 
     public static double calcFeetAndInchesToCentimeters(double feet, double inches) {
-        double newVar = 0;
-        double newVary = 0;
-        double centy = 0;
 
         if(feet < 0) {
+            System.out.println("Invalid");
             return -1;
-        } if(inches <= 0 || inches >= 12){
+        } if(inches < 0 || inches >= 12){
+            System.out.println("invalid");
             return -1;
         } else {
-            newVar = feet * 12;
-            newVary = inches + newVar;
-            centy = newVary * 2.54;
+            double centimeters = (feet * 12) * 2.54;
+            centimeters += inches * 2.54;
+            System.out.println(centimeters);
+            return centimeters;
         }
-        return centy;
     }
 
     public static double calcFeetAndInchesToCentimeters(double inches) {
-        double someVar = 0;
-        double someNewVar = 0;
-        double inchesToFeet = 0;
-        if (inches <= 0) {
+        if (inches < 0) {
             return -1;
         } else {
-            someVar = inches % 12;
-            someNewVar = Math.floor(inches / 12);
-            inchesToFeet = calcFeetAndInchesToCentimeters(someNewVar, someVar);
-
-        } return inchesToFeet;
+            double feet = Math.floor(inches / 12);
+            inches = inches % 12;
+            return calcFeetAndInchesToCentimeters(feet, inches);
+        }
     }
 
 }
