@@ -26,7 +26,7 @@ public class Main {
 
 
 
-        char newVar = 'f';
+        char newVar = 'd';
 
 	    switch(newVar) {
 
@@ -36,6 +36,20 @@ public class Main {
 
             default:
                 System.out.println("Was not a, b, c, d, e");
+                break;
+        }
+
+        String month = "January";
+
+	    switch(month.toLowerCase()) {
+            case "february":
+                System.out.println("month is febrauary");
+                break;
+            case "january":
+                System.out.println("month was january");
+                break;
+            default:
+                System.out.println("not sure what month it is");
                 break;
         }
     }
