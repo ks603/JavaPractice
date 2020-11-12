@@ -24,6 +24,19 @@ public class Main {
                 break;
         }
 
-//        More code here
+
+
+        char newVar = 'f';
+
+	    switch(newVar) {
+
+            case 'a': case 'b': case 'c': case 'd': case 'e':
+                System.out.println("char was a, b, c, d, e");
+                break;
+
+            default:
+                System.out.println("Was not a, b, c, d, e");
+                break;
+        }
     }
 }
