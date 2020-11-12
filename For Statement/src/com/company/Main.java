@@ -14,7 +14,17 @@ public class Main {
             System.out.println("10,000 at " + i + "% interest rate = " + String.format("%.2f",calculateInterest(10000, i)));
         }
 
-        System.out.println(isPrime(16));
+        int count = 0;
+        for(int i = 10; i <= 50; i++){
+            if (isPrime(i)) {
+                count++;
+                System.out.println(i);
+                if (count == 10) {
+                    System.out.println("code will break first three");
+                    break;
+                }
+            }
+        }
     }
 
     public static double calculateInterest(double amount, double interestRate) {
