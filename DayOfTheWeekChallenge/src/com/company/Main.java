@@ -3,8 +3,24 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    printDayOFTheWeek(8);
-	    newDayOfTheWeek(8);
+        printDayOFTheWeek(-1);
+	    printDayOFTheWeek(0);
+        printDayOFTheWeek(1);
+        printDayOFTheWeek(2);
+        printDayOFTheWeek(3);
+        printDayOFTheWeek(4);
+        printDayOFTheWeek(5);
+        printDayOFTheWeek(6);
+        printDayOFTheWeek(7);
+	    newDayOfTheWeek(-1);
+        newDayOfTheWeek(0);
+        newDayOfTheWeek(2);
+        newDayOfTheWeek(3);
+        newDayOfTheWeek(4);
+        newDayOfTheWeek(5);
+        newDayOfTheWeek(6);
+        newDayOfTheWeek(1);
+        newDayOfTheWeek(8);
     }
 
     public static void printDayOFTheWeek(int day){
