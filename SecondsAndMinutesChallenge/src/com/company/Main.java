@@ -2,16 +2,17 @@ package com.company;
 
 public class Main {
 
+    public static final String INVALID_VALUE = "Invalid value";
+
     public static void main(String[] args) {
 
-        System.out.println(getDurationString(65, 8));
+        System.out.println(getDurationString(-1, 8));
         System.out.println(getDurationString(63145));
     }
 
     public static String getDurationString(int minutes, int seconds) {
         if (minutes < 0 || seconds < 0 || seconds > 59) {
-            System.out.println("invalid Input");
-            return "invalid Input";
+            return INVALID_VALUE;
         }
             int hours = minutes / 60;
             minutes = minutes % 60;
